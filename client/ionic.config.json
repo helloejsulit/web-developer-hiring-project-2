@@ -1,0 +1,7 @@
+{
+  "name": "Widgets Inc.",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
