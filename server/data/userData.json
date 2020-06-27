@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "userId": 1,
+      "name": "Wile E. Coyote",
+      "contact": "+9278888",
+      "address": "Burbank, California",
+      "policy": {
+        "policySummary": {
+          "policyNumber": 7444810977,
+          "policyId": 1,
+          "effectiveDate": "July 27, 2016",
+          "maturityDate": "July 27, 2091",
+          "insured": "Wile E. Coyote",
+          "currency": "USD",
+          "faceAmount": 750000,
+          "status": "Premium Paying",
+          "duration": 3
+        },
+        "policySchedule": {
+          "dueDate": "June 27, 2020",
+          "premiumDue": 999,
+          "currentPaymentMode": "monthly"
+        },
+        "policyHistory": [
+          {
+            "transactionDate": "May 27, 2020",
+            "transaction": "Premium Payment",
+            "amount": 999,
+            "orNumber": 111111
+          },
+          {
+            "transactionDate": "April 27, 2020",
+            "transaction": "Premium Payment",
+            "amount": 999,
+            "orNumber": 222222
+          },
+          {
+            "transactionDate": "March 27, 2020",
+            "transaction": "Premium Payment",
+            "amount": 999,
+            "orNumber": 333333
+          },
+          {
+            "transactionDate": "February 27, 2020",
+            "transaction": "Premium Payment",
+            "amount": 999,
+            "orNumber": 444444
+          },
+          {
+            "transactionDate": "January 27, 2020",
+            "transaction": "Premium Payment",
+            "amount": 999,
+            "orNumber": 555555
+          }
+        ]
+      }
+    }
+  ]
+}
