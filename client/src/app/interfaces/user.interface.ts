@@ -13,7 +13,7 @@ export interface UserPolicy {
 }
 
 export interface UserPolicyDetails {
-  policyId: number;
+  planId: number;
   policyNumber: number;
   effectiveDate: string;
   maturityDate: string;

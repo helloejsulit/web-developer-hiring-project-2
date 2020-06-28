@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Plans</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let policy of policies">
+    <ion-card-header>
+      <ion-card-subtitle>{{ policy.coveragePeriod }}</ion-card-subtitle>
+      <ion-card-title>{{ policy.planName }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content [innerHtml]="policy.description"> </ion-card-content>
+  </ion-card>
+</ion-content>

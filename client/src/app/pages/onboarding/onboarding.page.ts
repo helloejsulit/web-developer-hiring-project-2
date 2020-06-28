@@ -48,7 +48,7 @@ export class OnboardingPage implements OnInit {
 
   startApp() {
     this.router
-      .navigateByUrl("/app/policies", { replaceUrl: true })
+      .navigateByUrl("/app/plans", { replaceUrl: true })
       .then(() => console.log("save onboarding data to storage"));
   }
 

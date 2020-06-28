@@ -1,13 +1,13 @@
-export interface Policy {
-  policyId: number;
-  policyName: string;
+export interface Plan {
+  planId: number;
+  planName: string;
   coveragePeriod: string;
   issueAge: string;
   description: string;
-  details: PolicyDetails[];
+  details: PlanDetails[];
 }
 
-export interface PolicyDetails {
+export interface PlanDetails {
   icon: string;
   title: string;
   description: string;

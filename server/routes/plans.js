@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const policies = require("../data/policiesData.json");
+const plans = require("../data/plansData.json");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -9,11 +9,11 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/list", function (req, res, next) {
-  res.json(policies);
+  res.json(plans);
 });
 
 router.post("/policy/:id", function (req, res, next) {
-  const selectedPolicy = policies.data.find(
+  const selectedPolicy = plans.data.find(
     (policy) => policy.policyId === parseInt(req.params.id)
   );
 

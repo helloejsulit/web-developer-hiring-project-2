@@ -9,13 +9,13 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: "policies",
+        path: "plans",
         children: [
           {
             path: "",
             loadChildren: () =>
-              import("../../pages/policies/policies.module").then(
-                (m) => m.PoliciesPageModule
+              import("../../pages/plans/plans.module").then(
+                (m) => m.PlansPageModule
               ),
           },
         ],

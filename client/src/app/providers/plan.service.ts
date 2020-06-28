@@ -5,12 +5,12 @@ import { Observable } from "rxjs";
 @Injectable({
   providedIn: "root",
 })
-export class PolicyService {
+export class PlanService {
   serverURL = environment.serverURL;
 
   constructor(private http: HttpClient) {}
 
   getAllPolicies = (): Observable<Object> => {
-    return this.http.get(`${this.serverURL}/policies/list`);
+    return this.http.get(`${this.serverURL}/plans/list`);
   };
 }

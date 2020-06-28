@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "policyId": 1,
+      "planId": 1,
       "planName": "Family Care Plus",
       "coveragePeriod": "FOR 10 YEARS (UNTIL AGE 75)",
       "issueAge": "18 – 65 YEARS OLD",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "policyId": 2,
+      "planId": 2,
       "planName": "Build Estate Plus",
       "coveragePeriod": "WHOLE LIFE",
       "issueAge": "18 – 70 YEARS OLD",
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "policyId": 3,
+      "planId": 3,
       "planName": "Life Ready Plus",
       "coveragePeriod": "WHOLE LIFE",
       "issueAge": "0 - 70 YEARS OLD",
@@ -93,7 +93,7 @@
       ]
     },
     {
-      "policyId": 4,
+      "planId": 4,
       "planName": "Assure Protect",
       "coveragePeriod": "WHOLE LIFE",
       "issueAge": "18 – 70 YEARS OLD",
@@ -127,7 +127,7 @@
       ]
     },
     {
-      "policyId": 5,
+      "planId": 5,
       "planName": "Life Protect",
       "coveragePeriod": "TERM",
       "issueAge": "18 - 79 YEARS OLD (DEPENDING ON PAY-VARIANT)",
