@@ -8,7 +8,7 @@ router.get("/", function (req, res, next) {
   res.send({});
 });
 
-router.post("/list", function (req, res, next) {
+router.get("/list", function (req, res, next) {
   res.json(policies);
 });
 
