@@ -10,7 +10,11 @@ export class PlanService {
 
   constructor(private http: HttpClient) {}
 
-  getAllPolicies = (): Observable<Object> => {
+  getAllPlans = (): Observable<Object> => {
     return this.http.get(`${this.serverURL}/plans/list`);
+  };
+
+  getPlanById = (planId) => {
+    return this.http.post(`${this.serverURL}/plans/plan`, { id: planId });
   };
 }

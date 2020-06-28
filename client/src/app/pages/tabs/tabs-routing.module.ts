@@ -18,6 +18,13 @@ const routes: Routes = [
                 (m) => m.PlansPageModule
               ),
           },
+          {
+            path: ":id",
+            loadChildren: () =>
+              import("../../pages/plan-details/plan-details.module").then(
+                (m) => m.PlanDetailsPageModule
+              ),
+          },
         ],
       },
       {

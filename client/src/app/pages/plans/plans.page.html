@@ -1,15 +1,44 @@
 <ion-header>
   <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-content"></ion-menu-button>
+    </ion-buttons>
     <ion-title>Plans</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card *ngFor="let policy of policies">
-    <ion-card-header>
-      <ion-card-subtitle>{{ policy.coveragePeriod }}</ion-card-subtitle>
-      <ion-card-title>{{ policy.planName }}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content [innerHtml]="policy.description"> </ion-card-content>
+  <ion-card *ngFor="let plan of plans" button="true">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <div class="image">
+            <ion-img [src]="image"></ion-img>
+          </div>
+        </ion-col>
+        <ion-col size="9">
+          <div class="details">
+            <ion-card-header>
+              <ion-card-subtitle>
+                <ion-icon name="fitness-outline"></ion-icon>
+                {{ plan.coveragePeriod }}
+              </ion-card-subtitle>
+              <ion-card-title>
+                {{ plan.planName }}
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content [innerHtml]="plan.description">
+            </ion-card-content>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-button [routerLink]="plan.planId" expand="full" fill="clear">
+            Learn More
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-card>
 </ion-content>

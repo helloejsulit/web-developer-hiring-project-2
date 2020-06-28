@@ -12,12 +12,11 @@ router.get("/list", function (req, res, next) {
   res.json(plans);
 });
 
-router.post("/policy/:id", function (req, res, next) {
-  const selectedPolicy = plans.data.find(
-    (policy) => policy.policyId === parseInt(req.params.id)
+router.post("/plan", function (req, res, next) {
+  const selectedPlan = plans.data.find(
+    (plan) => plan.planId === parseInt(req.body.id)
   );
-
-  res.json(selectedPolicy);
+  res.json(selectedPlan);
 });
 
 module.exports = router;

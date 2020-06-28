@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]="'app/plans'"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ plan ? plan.planName : 'Plan' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="details" *ngIf="plan">
+    <ion-card color="tertiary">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <div class="image">
+              <ion-img [src]="image"></ion-img>
+            </div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="details">
+              <ion-card-header>
+                <ion-card-subtitle>
+                  <ion-icon name="fitness-outline"></ion-icon>
+                  {{ plan.coveragePeriod }}
+                </ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="fitness-outline"></ion-icon>
+                  {{ plan.issueAge }}
+                </ion-card-subtitle>
+                <ion-card-title>
+                  {{ plan.planName }}
+                </ion-card-title>
+              </ion-card-header>
+              <ion-card-content [innerHtml]="plan.description">
+              </ion-card-content>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <ion-item-divider> </ion-item-divider>
+    <div class="plan-details" *ngFor="let details of plan.details">
+      <h3 class="ion-padding-horizontal">
+        <ion-icon slot="start" name="{{ details.icon }}-outline"></ion-icon>
+        {{ details.title | titlecase }}
+      </h3>
+      <div
+        class="ion-padding-horizontal description"
+        [innerHTML]="details.description"
+      ></div>
+    </div>
+  </div>
+</ion-content>

@@ -10,16 +10,17 @@ import { Plan } from "src/app/interfaces/plan.interface";
   styleUrls: ["./plans.page.scss"],
 })
 export class PlansPage implements OnInit {
-  policies: Plan[];
+  plans: Plan[];
+  image: string = "https://picsum.photos/150";
 
   constructor(private planService: PlanService) {}
 
   ngOnInit() {
     this.planService
-      .getAllPolicies()
+      .getAllPlans()
       .pipe(take(1))
-      .subscribe((policies: any) => {
-        this.policies = policies.data;
+      .subscribe((plans: any) => {
+        this.plans = plans.data;
       });
   }
 }
