@@ -17,11 +17,6 @@ export class AppComponent {
       icon: "briefcase",
     },
     {
-      title: "Basic Policy Information",
-      url: "/app/tabs/differential-formula",
-      icon: "bulb",
-    },
-    {
       title: "Payments and Benefits History",
       url: "/app/tabs/integral-formula",
       icon: "cash",
