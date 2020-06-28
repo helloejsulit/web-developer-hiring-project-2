@@ -1,9 +1,33 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>account</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Account</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" *ngIf="currentUser">
+        <ion-icon slot="start" name="exit"></ion-icon>
+        Logout
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-button
+    class="ion-margin"
+    *ngIf="!currentUser"
+    [routerLink]="'/login'"
+    expand="full"
+    fill="clear"
+  >
+    Login to Your Account
+  </ion-button>
+  <ion-card color="primary" *ngIf="currentUser">
+    <ion-card-header>
+      <ion-card-subtitle>{{ currentUser.email }}</ion-card-subtitle>
+      <ion-card-title>{{ currentUser.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ currentUser.address }}</p>
+      <p>{{ currentUser.contact }}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
