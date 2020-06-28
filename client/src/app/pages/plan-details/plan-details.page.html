@@ -8,8 +8,8 @@
 </ion-header>
 
 <ion-content>
-  <div class="details" *ngIf="plan">
-    <ion-card color="tertiary">
+  <div class="details ion-margin" *ngIf="plan">
+    <ion-card color="light">
       <ion-grid>
         <ion-row>
           <ion-col size="3">
@@ -39,12 +39,11 @@
         </ion-row>
       </ion-grid>
     </ion-card>
-    <ion-item-divider> </ion-item-divider>
-    <div class="plan-details" *ngFor="let details of plan.details">
-      <h3 class="ion-padding-horizontal">
+    <div class="plan-details ion-margin" *ngFor="let details of plan.details">
+      <h4 class="ion-padding-horizontal">
         <ion-icon slot="start" name="{{ details.icon }}-outline"></ion-icon>
         {{ details.title | titlecase }}
-      </h3>
+      </h4>
       <div
         class="ion-padding-horizontal description"
         [innerHTML]="details.description"
