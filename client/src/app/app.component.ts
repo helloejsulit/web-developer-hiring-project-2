@@ -1,15 +1,38 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Platform } from "@ionic/angular";
+import { SplashScreen } from "@ionic-native/splash-screen/ngx";
+import { StatusBar } from "@ionic-native/status-bar/ngx";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+  selector: "app-root",
+  templateUrl: "app.component.html",
+  styleUrls: ["app.component.scss"],
 })
 export class AppComponent {
+  appPages = [
+    {
+      title: "Policy Summary",
+      url: "/app/tabs/topics",
+      icon: "briefcase",
+    },
+    {
+      title: "Basic Policy Information",
+      url: "/app/tabs/differential-formula",
+      icon: "bulb",
+    },
+    {
+      title: "Payments and Benefits History",
+      url: "/app/tabs/integral-formula",
+      icon: "cash",
+    },
+  ];
+
+  appTitle = "Widgets Inc.";
+  headerImg = "assets/svg/shapes.svg";
+  headerName = "Menu";
+  isLoggedIn = false;
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -24,4 +47,8 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  logItem = ($e) => {
+    console.log($e);
+  };
 }
