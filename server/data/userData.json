@@ -4,6 +4,8 @@
       "userId": 1,
       "name": "Wile E. Coyote",
       "contact": "+9278888",
+      "email": "wilecoyote@acme.com",
+      "password": "beepbeep",
       "address": "Burbank, California",
       "policy": {
         "policySummary": {
