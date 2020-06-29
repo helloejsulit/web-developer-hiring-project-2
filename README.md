@@ -1,54 +1,23 @@
 # Loss Control Plus Hiring Project
+
 ## Full-Stack Web Developer
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+- [Install Dependencies](#install)
+- [Run](#run)
 
-<!-- code_chunk_output -->
+The project is consisted of 2 folders:
 
-- [Loss Control Plus Hiring Project](#loss-control-plus-hiring-project)
-  - [Full-Stack Web Developer](#full-stack-web-developer)
-    - [READ THIS BEFORE YOU BEGIN](#read-this-before-you-begin)
-    - [Instructions](#instructions)
-    - [Project Requirements](#project-requirements)
-      - [Scenario](#scenario)
-      - [Success Conditions](#success-conditions)
-    - [Guidelines](#guidelines)
+```
+  /client
+  /server
+```
 
-<!-- /code_chunk_output -->
+where the `/client` folder contains the frontend application created using Ionic and Angular Framework. The `/server` is built using NodeJS and Express.
 
-### READ THIS BEFORE YOU BEGIN
+### Install
 
-This hiring project is intended to gauge a developer's ability to both work with the technologies we are using, as well as their soft-skills.
+First, before running the app. Please run `npm run install` first. This will install both the client's and server's dependencies.
 
-Technical prowess is a good thing but, by itself, is not enough to earn a spot on our team.
+### Run
 
-### Instructions
-
-1. Fork this repo.
-2. Review the guidelines
-3. Follow the Project Requirements.
-4. Reach out with any questions.
-5. Submit a pull request when your project is finished.
-
-### Project Requirements
-#### Scenario
-Welcome to Widgets Inc. We have an exciting new product in the insurance sector and we are hoping to expand our offering to cover more of our customer needs.
-
-We've decided to create a simple SPA web-app that allows our customers to track their policies to make sure that everyone has paid their premiums.
-
-
-#### Success Conditions
-1. Create an [Express](https://expressjs.com/) web backend with an [Angular](https://angular.io/) frontend.
-2. Store whatever information you think makes sense for an insurance payment system. Data points such as: due date, cancel date, payment date, amount, etc. would be a general idea of what might typically be used.
-3. Create a utility function that generates random application data. Using this function should allow for the application to appear to have been in production use for some time.
-4. Create several visual reports that dissect the available data and presents them in interesting and useful ways.
-
-
-### Guidelines
-
-1. Commit early, commit often. We would love to see more commits showing the process you took to get to the finished product. Please do not squash your commits.
-2. Please use eslint. Airbnb is a great style to use for this project but you may choose another if you wish.
-3. We'd prefer Typescript to JavaScript but it's not absolutely required.
-4. Writing tests / using TDD practices would be a massive point in your favor.
-5. Spend as much, or as little, time on this as you wish. That said, we'd prefer a project be delivered within 72 hours of acceptance.
-6. We encourage you to reach out to us with any questions you may have. Doing so will not be seen as detrimental to your delivered project.
+To start the app, run `npm run dev` to run both the client and the server. The client is running on `http:localhost:8100` and the server is running on `http:localhost:3000`

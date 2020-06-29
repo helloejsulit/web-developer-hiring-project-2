@@ -12,28 +12,4 @@ router.post("/getUserById", (req, res, next) => {
   res.json(user);
 });
 
-// router.post("/:id/policy", (req, res, next) => {
-//   const user = userData.data.find(
-//     (user) => user.userId === parseInt(req.params.id)
-//   );
-
-//   res.json(user.policy);
-// });
-
-// router.post("/:id/schedule", (req, res, next) => {
-//   const user = userData.data.find(
-//     (user) => user.userId === parseInt(req.params.id)
-//   );
-
-//   res.json(user.policy.policySchedule);
-// });
-
-// router.post("/:id/history", (req, res, next) => {
-//   const user = userData.data.find(
-//     (user) => user.userId === parseInt(req.params.id)
-//   );
-
-//   res.json(user.policy.policyHistory);
-// });
-
 module.exports = router;
