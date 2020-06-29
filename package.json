@@ -1,0 +1,28 @@
+{
+  "name": "web-developer-hiring-project-2",
+  "version": "1.0.0",
+  "description": "<!-- @import \"[TOC]\" {cmd=\"toc\" depthFrom=1 depthTo=6 orderedList=false} -->",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "server-install": "cd server && npm install",
+    "install": "concurrently \"npm run server-install\" \"npm run client-install\"",
+    "server": "cd server && nodemon app.js",
+    "client": "cd client && ionic serve",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helloejsulit/web-developer-hiring-project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helloejsulit/web-developer-hiring-project-2/issues"
+  },
+  "homepage": "https://github.com/helloejsulit/web-developer-hiring-project-2#readme"
+}
