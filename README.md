@@ -16,7 +16,7 @@ where the `/client` folder contains the frontend application created using Ionic
 
 ### Install
 
-First, before running the app. Please run `npm run install` first. This will install both the client's and server's dependencies.
+First, before running the app. Please run `npm install` first. This will install both the client's and server's dependencies.
 
 ### Run
 
