@@ -2,7 +2,7 @@
   <ion-toolbar color="primary">
     <ion-title>Account</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="logout()" *ngIf="currentUser">
+      <ion-button (click)="logout()" *ngIf="isLoggedIn">
         <ion-icon slot="start" name="exit"></ion-icon>
         Logout
       </ion-button>
@@ -13,9 +13,9 @@
 <ion-content>
   <app-login-button
     (onLogin)="login($event)"
-    *ngIf="!currentUser"
+    *ngIf="!isLoggedIn"
   ></app-login-button>
-  <div class="user-details" *ngIf="currentUser">
+  <div class="user-details" *ngIf="(currentUser$ | async) as currentUser">
     <app-policy-schedule
       [schedule]="currentUser.policy.policySchedule"
     ></app-policy-schedule>

@@ -18,7 +18,6 @@ export class LoginPage implements OnInit {
     private menu: MenuController,
     private fb: FormBuilder,
     private auth: AuthService,
-    private user: UserService,
     private router: Router
   ) {}
 
@@ -34,11 +33,8 @@ export class LoginPage implements OnInit {
     this.auth
       .login(userData)
       .pipe(take(1))
-      .subscribe((res) => {
-        if (res) {
-          this.user.saveUserData(res);
-          this.router.navigate(["app/account"]);
-        }
+      .subscribe((u) => {
+        if (u) this.router.navigate(["/app/account"]);
       });
   };
 

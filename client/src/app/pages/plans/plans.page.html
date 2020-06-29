@@ -8,5 +8,9 @@
 </ion-header>
 
 <ion-content>
-  <app-plan-card [plan]="plan" *ngFor="let plan of plans"></app-plan-card>
+  <app-plan-card
+    (onLearnMore)="learnMore($event)"
+    [plan]="plan"
+    *ngFor="let plan of plans"
+  ></app-plan-card>
 </ion-content>

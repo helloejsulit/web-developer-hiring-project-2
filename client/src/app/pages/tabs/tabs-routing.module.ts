@@ -37,6 +37,20 @@ const routes: Routes = [
                 (m) => m.AccountPageModule
               ),
           },
+          {
+            path: "policy-summary",
+            loadChildren: () =>
+              import("../../pages/policy-summary/policy-summary.module").then(
+                (m) => m.PolicySummaryPageModule
+              ),
+          },
+          {
+            path: "policy-payments",
+            loadChildren: () =>
+              import("../../pages/policy-payments/policy-payments.module").then(
+                (m) => m.PolicyPaymentsPageModule
+              ),
+          },
         ],
       },
     ],

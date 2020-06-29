@@ -23,4 +23,8 @@ export class UserService {
   getUserById = (userId) => {
     return this.http.post(`${this.serverURL}/getUserById`, { id: userId });
   };
+
+  removeUserData = () => {
+    this.storage.remove("userData");
+  };
 }

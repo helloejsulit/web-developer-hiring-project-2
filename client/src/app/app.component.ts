@@ -13,12 +13,12 @@ export class AppComponent {
   appPages = [
     {
       title: "Policy Summary",
-      url: "/app/tabs/topics",
+      url: "/app/account/policy-summary",
       icon: "briefcase",
     },
     {
-      title: "Payments and Benefits History",
-      url: "/app/tabs/integral-formula",
+      title: "Payments History",
+      url: "/app/account/policy-payments",
       icon: "cash",
     },
   ];

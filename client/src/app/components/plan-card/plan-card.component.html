@@ -27,7 +27,7 @@
     </ion-row>
     <ion-row *ngIf="detail">
       <ion-col size="12">
-        <ion-button [routerLink]="plan.planId" expand="full" fill="clear">
+        <ion-button (click)="learnMore(plan.planId)" expand="full" fill="clear">
           Learn More
         </ion-button>
       </ion-col>

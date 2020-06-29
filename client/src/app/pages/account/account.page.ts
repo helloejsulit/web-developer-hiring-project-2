@@ -3,6 +3,7 @@ import { UserService } from "src/app/providers/user.service";
 import { User } from "src/app/interfaces/user.interface";
 import { AuthService } from "src/app/providers/auth.service";
 import { Router } from "@angular/router";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-account",
@@ -10,7 +11,8 @@ import { Router } from "@angular/router";
   styleUrls: ["./account.page.scss"],
 })
 export class AccountPage implements OnInit {
-  currentUser: User;
+  currentUser$: Observable<User>;
+  isLoggedIn: boolean;
 
   constructor(
     private userService: UserService,
@@ -18,9 +20,11 @@ export class AccountPage implements OnInit {
     private router: Router
   ) {}
 
-  async ngOnInit() {
-    this.currentUser = await this.userService.getUserData();
-    console.log(this.currentUser);
+  ngOnInit() {
+    this.authService.getAuthState$().subscribe((authState: boolean) => {
+      this.isLoggedIn = authState;
+    });
+    this.currentUser$ = this.authService.getCurrentUser$();
   }
 
   login = ($event) => {
