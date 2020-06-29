@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { UserService } from "src/app/providers/user.service";
 import { User } from "src/app/interfaces/user.interface";
 import { AuthService } from "src/app/providers/auth.service";
 import { Router } from "@angular/router";
@@ -14,11 +13,7 @@ export class AccountPage implements OnInit {
   currentUser$: Observable<User>;
   isLoggedIn: boolean;
 
-  constructor(
-    private userService: UserService,
-    private authService: AuthService,
-    private router: Router
-  ) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
     this.authService.getAuthState$().subscribe((authState: boolean) => {

@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 import { Platform } from "@ionic/angular";
 import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
+import { AuthService } from "./providers/auth.service";
 
 @Component({
   selector: "app-root",
@@ -26,12 +27,13 @@ export class AppComponent {
   appTitle = "Widgets Inc.";
   headerImg = "assets/svg/shapes.svg";
   headerName = "Menu";
-  isLoggedIn = false;
+  isLoggedIn: boolean;
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private authService: AuthService
   ) {
     this.initializeApp();
   }
@@ -40,10 +42,14 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      this.authService.getAuthState$().subscribe((authState: boolean) => {
+        this.isLoggedIn = authState;
+      });
     });
   }
 
-  logItem = ($e) => {
-    console.log($e);
+  logOut = () => {
+    this.authService.logout();
   };
 }

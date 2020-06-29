@@ -3,7 +3,6 @@ import { MenuController } from "@ionic/angular";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { AuthService } from "src/app/providers/auth.service";
 import { take } from "rxjs/operators";
-import { UserService } from "src/app/providers/user.service";
 import { Router } from "@angular/router";
 
 @Component({

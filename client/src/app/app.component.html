@@ -43,7 +43,7 @@
           </ion-list-header>
           <ion-menu-toggle autoHide="false">
             <ion-item
-              routerLink="/account"
+              routerLink="/app/account"
               routerLinkActive="selected"
               lines="none"
               detail="false"
@@ -53,7 +53,7 @@
             </ion-item>
           </ion-menu-toggle>
           <ion-menu-toggle autoHide="false">
-            <ion-item lines="none">
+            <ion-item lines="none" button="true" (click)="logOut()">
               <ion-icon slot="start" name="exit"></ion-icon>
               <ion-label>Logout</ion-label>
             </ion-item>

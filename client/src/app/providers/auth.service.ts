@@ -1,9 +1,8 @@
 import { Injectable } from "@angular/core";
-import { Storage } from "@ionic/storage";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment";
 import { UserService } from "./user.service";
-import { Subject, BehaviorSubject } from "rxjs";
+import { Subject, BehaviorSubject, ReplaySubject } from "rxjs";
 import { User } from "../interfaces/user.interface";
 import { map } from "rxjs/operators";
 
@@ -12,7 +11,7 @@ import { map } from "rxjs/operators";
 })
 export class AuthService {
   serverURL = environment.serverURL + "/auth";
-  currentUser$: Subject<User> = new Subject<User>();
+  currentUser$: ReplaySubject<User> = new ReplaySubject<User>();
   isLoggedIn$: BehaviorSubject<Boolean> = new BehaviorSubject<Boolean>(false);
 
   constructor(private http: HttpClient, private userService: UserService) {
@@ -20,6 +19,7 @@ export class AuthService {
       if (u) {
         this.isLoggedIn$.next(true);
         this.currentUser$.next(u);
+        console.log(u);
       }
     });
   }
