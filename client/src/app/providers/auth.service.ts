@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment";
 import { UserService } from "./user.service";
-import { Subject, BehaviorSubject, ReplaySubject } from "rxjs";
+import { BehaviorSubject, ReplaySubject } from "rxjs";
 import { User } from "../interfaces/user.interface";
 import { map } from "rxjs/operators";
 
@@ -12,7 +12,7 @@ import { map } from "rxjs/operators";
 export class AuthService {
   serverURL = environment.serverURL + "/auth";
   currentUser$: ReplaySubject<User> = new ReplaySubject<User>();
-  isLoggedIn$: BehaviorSubject<Boolean> = new BehaviorSubject<Boolean>(false);
+  isLoggedIn$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient, private userService: UserService) {
     this.userService.getUserData().then((u) => {
