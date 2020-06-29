@@ -1,0 +1,11 @@
+<ion-card color="danger" class="ion-no-margin">
+  <ion-card-header>
+    <ion-card-subtitle>Policy Schedule</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <h1>
+      {{ schedule.dueDate }} -
+      {{ schedule.premiumDue | currency: "USD" }}
+    </h1>
+  </ion-card-content>
+</ion-card>

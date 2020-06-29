@@ -23,6 +23,10 @@ export class AccountPage implements OnInit {
     console.log(this.currentUser);
   }
 
+  login = ($event) => {
+    this.router.navigate([$event]);
+  };
+
   logout = () => {
     this.authService.logout();
     this.router.navigate(["/app/plans"]);

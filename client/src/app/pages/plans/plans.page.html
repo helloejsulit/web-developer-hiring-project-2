@@ -8,42 +8,5 @@
 </ion-header>
 
 <ion-content>
-  <ion-card
-    *ngFor="let plan of plans"
-    button="true"
-    color="light"
-    class="ion-margin"
-  >
-    <ion-grid>
-      <ion-row>
-        <ion-col size-lg="3" size-md="12" size-xs="12">
-          <div class="image">
-            <ion-img [src]="image"></ion-img>
-          </div>
-        </ion-col>
-        <ion-col size-lg="9" size-md="12" size-xs="12">
-          <div class="details">
-            <ion-card-header>
-              <ion-card-subtitle>
-                <ion-icon name="fitness-outline"></ion-icon>
-                {{ plan.coveragePeriod }}
-              </ion-card-subtitle>
-              <ion-card-title>
-                {{ plan.planName }}
-              </ion-card-title>
-            </ion-card-header>
-            <ion-card-content [innerHtml]="plan.description">
-            </ion-card-content>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="12">
-          <ion-button [routerLink]="plan.planId" expand="full" fill="clear">
-            Learn More
-          </ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
+  <app-plan-card [plan]="plan" *ngFor="let plan of plans"></app-plan-card>
 </ion-content>

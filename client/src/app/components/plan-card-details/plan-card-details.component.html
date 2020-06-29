@@ -1,0 +1,10 @@
+<div class="plan-details">
+  <h4 class="ion-padding-horizontal">
+    <ion-icon slot="start" name="{{ detail.icon }}-outline"></ion-icon>
+    {{ detail.title | titlecase }}
+  </h4>
+  <div
+    class="ion-padding-horizontal description"
+    [innerHTML]="detail.description"
+  ></div>
+</div>

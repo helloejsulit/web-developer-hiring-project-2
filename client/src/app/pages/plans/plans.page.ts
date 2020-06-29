@@ -11,7 +11,6 @@ import { Plan } from "src/app/interfaces/plan.interface";
 })
 export class PlansPage implements OnInit {
   plans: Plan[];
-  image: string = "https://picsum.photos/150";
 
   constructor(private planService: PlanService) {}
 
