@@ -1,10 +1,60 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button [defaultHref]="'app/account'"></ion-back-button>
     </ion-buttons>
-    <ion-title>Policy Payments</ion-title>
+    <ion-title>Policy Payments History</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      View Transactions For:
+      <ion-item>
+        <ion-label>Years</ion-label>
+        <ion-select value="1" placeholder="Select Year">
+          <ion-select-option value="1">2 Years</ion-select-option>
+          <ion-select-option value="2">1 Year</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-grid>
+    <ion-row class="table-row">
+      <ion-col size="3" class="ion-text-center">
+        <p>Transaction Date</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <p>Transaction</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <p>Amount</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <p>OR Number</p>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let history of policyPayments">
+      <ion-col size="3" class="ion-text-center">
+        <p>{{ history.transactionDate }}</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <p>{{ history.transaction }}</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <p>{{ history.amount | currency: "USD" }}</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <p>#{{ history.orNumber }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button expand="full" fill="clear">
+          Load More
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

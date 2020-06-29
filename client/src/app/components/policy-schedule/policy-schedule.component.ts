@@ -6,7 +6,7 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: "app-policy-schedule",
+  selector: "app-policy-schedule-card",
   templateUrl: "./policy-schedule.component.html",
   styleUrls: ["./policy-schedule.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,

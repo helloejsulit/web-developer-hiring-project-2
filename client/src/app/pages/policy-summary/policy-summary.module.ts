@@ -1,20 +1,20 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
-import { IonicModule } from '@ionic/angular';
+import { IonicModule } from "@ionic/angular";
 
-import { PolicySummaryPageRoutingModule } from './policy-summary-routing.module';
+import { PolicySummaryPageRoutingModule } from "./policy-summary-routing.module";
 
-import { PolicySummaryPage } from './policy-summary.page';
+import { PolicySummaryPage } from "./policy-summary.page";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PolicySummaryPageRoutingModule
+    PolicySummaryPageRoutingModule,
   ],
-  declarations: [PolicySummaryPage]
+  declarations: [PolicySummaryPage],
 })
 export class PolicySummaryPageModule {}

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { TabsPage } from "./tabs.page";
 import { AuthGuard } from "src/app/guard/auth.guard";
+import { PolicyResolverService } from "src/app/providers/policy.resolver";
 
 const routes: Routes = [
   {
@@ -45,6 +46,9 @@ const routes: Routes = [
               import("../../pages/policy-summary/policy-summary.module").then(
                 (m) => m.PolicySummaryPageModule
               ),
+            resolve: {
+              policy: PolicyResolverService,
+            },
           },
           {
             path: "policy-payments",
@@ -52,6 +56,9 @@ const routes: Routes = [
               import("../../pages/policy-payments/policy-payments.module").then(
                 (m) => m.PolicyPaymentsPageModule
               ),
+            resolve: {
+              policy: PolicyResolverService,
+            },
           },
         ],
       },

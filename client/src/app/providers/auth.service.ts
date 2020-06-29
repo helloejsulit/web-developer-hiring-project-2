@@ -19,7 +19,6 @@ export class AuthService {
       if (u) {
         this.isLoggedIn$.next(true);
         this.currentUser$.next(u);
-        console.log(u);
       }
     });
   }

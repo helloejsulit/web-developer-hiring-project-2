@@ -22,6 +22,10 @@ export class AccountPage implements OnInit {
     this.currentUser$ = this.authService.getCurrentUser$();
   }
 
+  viewSummary = ($event) => {
+    this.router.navigate([$event.url]);
+  };
+
   login = ($event) => {
     this.router.navigate([$event]);
   };
