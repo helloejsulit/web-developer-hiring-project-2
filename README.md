@@ -14,6 +14,17 @@ The project is consisted of 2 folders:
 
 where the `/client` folder contains the frontend application created using Ionic and Angular Framework. The `/server` is built using NodeJS and Express.
 
+### Environment Setup
+
+I recommend the following environment setup to run the project:
+
+```
+  ionic     : v5.0.0
+  ionic-cli : v6.10.1
+  NodeJS    : v12.16.3 or latest LTS
+  npm       : v6.14.4
+```
+
 ### Install
 
 First, before running the app. Please run `npm install` first. This will install both the client's and server's dependencies.
